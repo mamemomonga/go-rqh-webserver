@@ -24,7 +24,7 @@ clean:
 
 run:
 	cd src; packr clean
-	cd src/$(NAME); go run .
+	cd src/$(NAME); go run *.go
 
 # -----------------------
 
@@ -58,8 +58,7 @@ bin/$(NAME): $(SRCS)
 # -----------------------
 
 $(GOBIN)/dep:
-	echo $(GOBIN)
-	@if [ "$(go env GOARCH)" == "arm" ]; then \
+	@if [ "$(shell go env GOARCH)" = "arm" ]; then \
 		go get -v -u github.com/golang/dep/cmd/dep ;\
 	else \
 		curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh ;\

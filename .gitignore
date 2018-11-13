@@ -2,3 +2,4 @@
 /vendor
 /release
 /bin
+*-packr.go
