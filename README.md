@@ -31,6 +31,7 @@
 
 	$ mkdir -p $GOPATH/src/github.com/mamemomonga/go-rqh-webserver
 	$ git clone https://github.com/mamemomonga/go-rqh-webserver $GOPATH/src/github.com/mamemomonga/go-rqh-webserver
+	$ cd $GOPATH/src/github.com/mamemomonga/go-rqh-webserver
 	$ make deps
 
 実行
